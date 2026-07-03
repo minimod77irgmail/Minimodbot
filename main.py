@@ -1,16 +1,20 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-BOT_TOKEN = "توکن_ربات_اینجا"
+TOKEN = "YOUR_BOT_TOKEN"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🌷 سلام، به MiniMod خوش آمدید.\n\n"
-        "ربات در حال راه‌اندازی است و به‌زودی امکانات کامل فعال می‌شود."
+        "🌷 سلام!\n\n"
+        "به ربات رسمی مینی مد خوش آمدید.\n\n"
+        "ربات با موفقیت راه‌اندازی شد. 🎉"
     )
 
-app = Application.builder().token(BOT_TOKEN).build()
+def main():
+    app = Application.builder().token(TOKEN).build()
+    app.add_handler(CommandHandler("start", start))
+    print("MiniModBot is running...")
+    app.run_polling()
 
-app.add_handler(CommandHandler("start", start))
-
-app.run_polling()
+if name == "__main__":
+    main()
