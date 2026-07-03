@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-TOKEN = "YOUR_BOT_TOKEN"
+TOKEN = "YOUR_BOT_TOKEN"   # ← اینجا توکن رباتت رو بذار
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
@@ -12,10 +12,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     app = Application.builder().token(TOKEN).build()
+    
     app.add_handler(CommandHandler("start", start))
+    
     print("MiniModBot is running...")
     app.run_polling()
 
 if name == "__main__":
-    application.run_polling()
     main()
