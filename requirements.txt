@@ -1,3 +1,1 @@
-python- telegrlm-bot--22.2 python-telegram-bot==22.2 
-python-dotenv 
-openai
+python-telegram-bot==22.2
