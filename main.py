@@ -18,5 +18,5 @@ def main():
     print("MiniModBot is running...")
     app.run_polling()
 
-if name == "__main__":
+if name == "main":
     main()
